@@ -211,7 +211,7 @@ void deleteFirst(ArrayList *arrayList)
         exit(1);
     }
 
-    for (int i = 0; i <= arrayList->count - 1; i++)
+    for (int i = 0; i < arrayList->count; i++)
     {
         arrayList->data[i] = arrayList->data[i + 1];
     }
@@ -224,12 +224,47 @@ void deleteFirst(ArrayList *arrayList)
 
 int size(const ArrayList *arrayList)
 {
-    if (arrayList->data == NULL || arrayList->count == 0)
-    {
-        printf("ArrayList is empty\n");
-        getchar();
-        exit(1);
-    }
+    if (isEmpty(arrayList) == 1) return -1;
 
     return arrayList->count;
+}
+
+int isEmpty(const ArrayList *arrayList)
+{
+    if (arrayList->data == NULL || arrayList->count == 0)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+
+int contains(const ArrayList *arrayList, int data)
+{
+    if (isEmpty(arrayList) == 1) return -1;
+
+    for (int i = 0; i < arrayList->count; i++)
+    {
+        if (arrayList->data[i] == data)
+        {
+            return 1;
+        }
+    }
+
+    return 0;
+}
+
+int indexOf(const ArrayList *arrayList, int data)
+{
+    if (isEmpty(arrayList) == 1) return -2;
+
+    for (int i = 0; i < arrayList->count; i++)
+    {
+        if (arrayList->data[i] == data)
+        {
+            return i;
+        }
+    }
+
+    return -1;
 }
