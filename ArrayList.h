@@ -13,7 +13,7 @@ typedef struct
 } ArrayList;
 
 /**
- * @brief Create an arraylist.
+ * @brief Create an new arraylist.
  * 
  * @return Pointer to the newly created ArrayList.
  */
