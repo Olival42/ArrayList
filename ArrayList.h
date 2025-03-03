@@ -14,62 +14,96 @@ typedef struct
 
 /**
  * @brief Create an arraylist.
+ * 
+ * @return Pointer to the newly created ArrayList.
  */
 ArrayList *create();
 
 /**
- * @brief Insert at the beginning of the arraylist
+ * @brief Insert at the beginning of the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
+ * @param data The integer value to insert.
  */
-void inserFirst(ArrayList *arrayList, int data);
+void insertFirst(ArrayList *arrayList, int data);
 
 /**
- * @brief Insert at the specified index of the arraylist
+ * @brief Insert at the specified index of the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
+ * @param data The integer value to insert.
+ * @param index The position to insert the value at.
  */
 void insertAt(ArrayList *arrayList, int data, int index);
 
 /**
- * @brief Insert at the end of the arraylist
+ * @brief Insert at the end of the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
+ * @param data The integer value to insert.
  */
 void insertLast(ArrayList *arrayList, int data);
 
 /**
- * @brief Return all the objects in the arraylist 
+ * @brief Print all the elements in the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
  */
-void getAllElements(ArrayList arrayList);
+void getAllElements(const ArrayList *arrayList);
 
 /**
- * @brief Return the object at the specified index in the arraylist 
+ * @brief Return the object at the specified index in the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
+ * @param index The position of the element to retrieve.
+ * @return The integer value at the specified index.
  */
-int get(ArrayList arrayLists, int index);
+int get(const ArrayList *arrayList, int index);
 
 /**
- * @brief Return the object at the beginning in the arraylist 
- */ 
-int getFirst(ArrayList arrayList);
-
-/** 
- * @brief Return the object at the end in the arraylist
- */ 
-int getLast(ArrayList arrayList);
+ * @brief Return the object at the beginning of the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
+ * @return The first integer value in the ArrayList.
+ */
+int getFirst(const ArrayList *arrayList);
 
 /**
- * @brief Delete the object at the end of the arraylist 
- */ 
+ * @brief Return the object at the end of the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
+ * @return The last integer value in the ArrayList.
+ */
+int getLast(const ArrayList *arrayList);
+
+/**
+ * @brief Delete the object at the end of the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
+ */
 void deleteLast(ArrayList *arrayList);
 
 /**
- * @brief Delete the object at the beginning of the arraylist 
- */ 
+ * @brief Delete the object at the beginning of the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
+ */
 void deleteFirst(ArrayList *arrayList);
 
-/** 
- * @brief Delete the object at the specified index of the arraylist
- */ 
+/**
+ * @brief Delete the object at the specified index of the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
+ * @param index The position of the element to delete.
+ */
 void deleteAt(ArrayList *arrayList, int index);
 
-/** 
- * @brief Return size of the arraylist
- */ 
-int size(ArrayList arrayList);
+/**
+ * @brief Return the size of the arraylist.
+ * 
+ * @param arrayList Pointer to the ArrayList.
+ * @return The number of elements in the ArrayList.
+ */
+int size(const ArrayList *arrayList);
 
 #endif

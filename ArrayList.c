@@ -24,7 +24,7 @@ ArrayList *create()
     return arrayList;
 }
 
-void inserFirst(ArrayList *arrayList, int data)
+void insertFirst(ArrayList *arrayList, int data)
 {
     if (arrayList->count == arrayList->size)
     {
@@ -101,63 +101,63 @@ void insertLast(ArrayList *arrayList, int data)
     arrayList->count += 1;
 }
 
-void getAllElements(ArrayList arrayList)
+void getAllElements(const ArrayList *arrayList)
 {
-    if (arrayList.data == NULL || arrayList.count == 0)
+    if (arrayList->data == NULL || arrayList->count == 0)
     {
         printf("ArrayList is empty\n");
         getchar();
         exit(1);
     }
 
-    for (int i = 0; i < arrayList.count; i++)
+    for (int i = 0; i < arrayList->count; i++)
     {
-        printf("%d ", arrayList.data[i]);
+        printf("%d ", arrayList->data[i]);
     }
     getchar();
 }
 
-int get(ArrayList arrayList, int index)
+int get(const ArrayList *arrayList, int index)
 {
-    if (arrayList.data == NULL || arrayList.count == 0)
+    if (arrayList->data == NULL || arrayList->count == 0)
     {
         printf("ArrayList is empty\n");
         getchar();
         exit(1);
     }
 
-    if (index < 0 || index > arrayList.count)
+    if (index < 0 || index > arrayList->count == 0)
     {
         printf("Invalid position\n");
         getchar();
         exit(1);
     }
 
-    return arrayList.data[index];
+    return arrayList->data[index];
 }
 
-int getFirst(ArrayList arrayList)
+int getFirst(const ArrayList *arrayList)
 {
-    if (arrayList.data == NULL || arrayList.count == 0)
+    if (arrayList->data == NULL || arrayList->count == 0)
     {
         printf("ArrayList is empty\n");
         getchar();
         exit(1);
     }
 
-    return arrayList.data[0];
+    return arrayList->data[0];
 }
 
-int getLast(ArrayList arrayList)
+int getLast(const ArrayList *arrayList)
 {
-    if (arrayList.data == NULL || arrayList.count == 0)
+    if (arrayList->data == NULL || arrayList->count == 0)
     {
         printf("ArrayList is empty\n");
         getchar();
         exit(1);
     }
 
-    return arrayList.data[arrayList.count - 1];
+    return arrayList->data[arrayList->count - 1];
 }
 
 void deleteLast(ArrayList *arrayList)
@@ -222,14 +222,14 @@ void deleteFirst(ArrayList *arrayList)
     getchar();
 }
 
-int size(ArrayList arrayList)
+int size(const ArrayList *arrayList)
 {
-    if (arrayList.data == NULL || arrayList.count == 0)
+    if (arrayList->data == NULL || arrayList->count == 0)
     {
         printf("ArrayList is empty\n");
         getchar();
         exit(1);
     }
 
-    return arrayList.count;
+    return arrayList->count;
 }

@@ -10,21 +10,21 @@ int main()
     inserFirst(arrayList, 5);
     insertAt(arrayList, 25, 3);
 
-    getAllElements(*arrayList);
+    getAllElements(arrayList);
 
     deleteFirst(arrayList);
     deleteAt(arrayList, 1);
     deleteLast(arrayList);
 
-    getAllElements(*arrayList);
+    getAllElements(arrayList);
 
     insertLast(arrayList, 50);
     inserFirst(arrayList, 35);
     insertAt(arrayList, 2, 4);
 
-    printf("%d\n", size(*arrayList));
+    printf("%d\n", size(arrayList));
 
-    getAllElements(*arrayList);
+    getAllElements(arrayList);
 
     return 0; //
 }
