@@ -26,5 +26,5 @@ int main()
 
     getAllElements(arrayList);
 
-    return 0; //
+    return 0;
 }
