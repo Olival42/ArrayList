@@ -275,8 +275,9 @@ int indexOf(const ArrayList *arrayList, int data)
 void clear(ArrayList *arrayList)
 {
     free(arrayList->data);
-    arrayList->data = malloc(sizeof(int) * arrayList->size);
+    arrayList->data = malloc(sizeof(int) * 10);
     arrayList->count = 0;
+    arrayList->size = 10;
 }
 
 void ensureCapacity(ArrayList *arrayList, int minCapacity)
