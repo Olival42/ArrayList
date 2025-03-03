@@ -31,7 +31,8 @@ int main()
 
     printf("%d\n", size(arrayList));
 
-    printf("%d", get(arrayList, 2));
+    printf("%d\n", get(arrayList, 2));
+    getchar();
 
     return 0;
 }

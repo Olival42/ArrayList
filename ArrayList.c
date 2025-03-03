@@ -126,7 +126,7 @@ int get(const ArrayList *arrayList, int index)
         exit(1);
     }
 
-    if (index < 0 || index > arrayList->count == 0)
+    if (index < 0 || index > arrayList->count)
     {
         printf("Invalid position\n");
         getchar();
