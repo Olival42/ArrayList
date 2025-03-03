@@ -12,6 +12,8 @@ int main()
     insertFirst(arrayList, 5);
     insertAt(arrayList, 25, 3);
 
+    getAllElements(arrayList);
+
     printf("%d\n", contains(arrayList, 20));
     printf("%d\n", indexOf(arrayList, 20));
 
@@ -29,7 +31,7 @@ int main()
 
     printf("%d\n", size(arrayList));
 
-    getAllElements(arrayList);
+    printf("%d", get(arrayList, 2));
 
     return 0;
 }

@@ -224,7 +224,8 @@ void deleteFirst(ArrayList *arrayList)
 
 int size(const ArrayList *arrayList)
 {
-    if (isEmpty(arrayList) == 1) return -1;
+    if (isEmpty(arrayList) == 1)
+        return -1;
 
     return arrayList->count;
 }
@@ -241,7 +242,8 @@ int isEmpty(const ArrayList *arrayList)
 
 int contains(const ArrayList *arrayList, int data)
 {
-    if (isEmpty(arrayList) == 1) return -1;
+    if (isEmpty(arrayList) == 1)
+        return -1;
 
     for (int i = 0; i < arrayList->count; i++)
     {
@@ -256,7 +258,8 @@ int contains(const ArrayList *arrayList, int data)
 
 int indexOf(const ArrayList *arrayList, int data)
 {
-    if (isEmpty(arrayList) == 1) return -2;
+    if (isEmpty(arrayList) == 1)
+        return -2;
 
     for (int i = 0; i < arrayList->count; i++)
     {
@@ -267,4 +270,75 @@ int indexOf(const ArrayList *arrayList, int data)
     }
 
     return -1;
+}
+
+void clear(ArrayList *arrayList)
+{
+    free(arrayList->data);
+    arrayList->data = malloc(sizeof(int) * arrayList->size);
+    arrayList->count = 0;
+}
+
+void ensureCapacity(ArrayList *arrayList, int minCapacity)
+{
+    if (minCapacity > arrayList->size)
+    {
+        int *newData = realloc(arrayList->data, sizeof(int) * minCapacity);
+        if (newData != NULL)
+        {
+            arrayList->data = newData;
+            arrayList->size = minCapacity;
+        }
+        else
+        {
+            printf("Failed to allocate memory\n");
+            getchar();
+            exit(1);
+        }
+    }
+}
+
+void trimToSize(ArrayList *arrayList)
+{
+    int *newData = realloc(arrayList->data, sizeof(int) * arrayList->count);
+    if (newData != NULL)
+    {
+        arrayList->data = newData;
+    }
+    else
+    {
+        printf("Failed to allocate memory\n");
+        getchar();
+        exit(1);
+    }
+}
+
+ArrayList *clone(const ArrayList *arrayList)
+{
+    ArrayList *newArrayList = malloc(sizeof(ArrayList));
+    if (newArrayList == NULL)
+    {
+        printf("Failed to allocate memory\n");
+        getchar();
+        return NULL;
+    }
+
+    newArrayList->data = malloc(sizeof(int) * arrayList->size);
+    if (newArrayList->data == NULL)
+    {
+        printf("Failed to allocate memory\n");
+        free(newArrayList);
+        getchar();
+        return NULL;
+    }
+
+    for (int i = 0; i < arrayList->count; i++)
+    {
+        newArrayList->data[i] = arrayList->data[i];
+    }
+
+    newArrayList->count = arrayList->count;
+    newArrayList->size = arrayList->size;
+
+    return newArrayList;
 }

@@ -132,4 +132,36 @@ int contains(const ArrayList *arrayList, int data);
  */
 int indexOf(const ArrayList *arrayList, int data);
 
+/**
+ * @brief Removes all elements from the ArrayList and frees its data memory.
+ * 
+ * @param arrayList Pointer to the ArrayList to be cleared.
+ */
+void clear(ArrayList *arrayList);
+
+/**
+ * @brief Ensures that the ArrayList has at least the specified minimum capacity.
+ *        If the current capacity is less than minCapacity, the array is resized.
+ * 
+ * @param arrayList Pointer to the ArrayList to check or resize.
+ * @param minCapacity The minimum required capacity.
+ */
+void ensureCapacity(ArrayList *arrayList, int minCapacity);
+
+/**
+ * @brief Trims the capacity of the ArrayList to match the current number of elements (count).
+ *        This reduces memory usage by freeing unused space.
+ * 
+ * @param arrayList Pointer to the ArrayList to trim.
+ */
+void trimToSize(ArrayList *arrayList);
+
+/**
+ * @brief Creates an exact copy of the given ArrayList, including its elements.
+ * 
+ * @param arrayList Pointer to the ArrayList to be cloned.
+ * @return Pointer to the new cloned ArrayList, or NULL if memory allocation fails.
+ */
+ArrayList *clone(const ArrayList *arrayList);
+
 #endif
