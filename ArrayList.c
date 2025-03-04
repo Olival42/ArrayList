@@ -6,6 +6,7 @@
  */
 
 #include "ArrayList.h"
+#include "Auxiliar.h"
 
 ArrayList *create()
 {
@@ -312,6 +313,26 @@ void trimToSize(ArrayList *arrayList)
         getchar();
         exit(1);
     }
+}
+
+void reverse(ArrayList *arrayList)
+{
+    if (isEmpty(arrayList) == 1)
+        return;
+
+    for (int j = 0; j < (arrayList->count - 1) / 2; j++)
+    {
+        int temp = arrayList->data[j];
+        arrayList->data[j] = arrayList->data[(arrayList->count - 1) - j];
+        arrayList->data[(arrayList->count - 1) - j] = temp;
+    }
+}
+
+void sort(ArrayList *arrayList)
+{
+    if (isEmpty(arrayList) == 1) return;
+
+    bubbleSort(arrayList);
 }
 
 ArrayList *clone(const ArrayList *arrayList)

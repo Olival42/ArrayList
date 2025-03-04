@@ -17,8 +17,6 @@ int main()
     printf("%d\n", contains(arrayList, 20));
     printf("%d\n", indexOf(arrayList, 20));
 
-    getAllElements(arrayList);
-
     deleteFirst(arrayList);
     deleteAt(arrayList, 1);
     deleteLast(arrayList);
@@ -32,7 +30,15 @@ int main()
     printf("%d\n", size(arrayList));
 
     printf("%d\n", get(arrayList, 2));
-    getchar();
+
+    sort(arrayList);
+    getAllElements(arrayList);
+
+    reverse(arrayList);
+    getAllElements(arrayList);
+
+    free(arrayList->data);
+    free(arrayList);
 
     return 0;
 }

@@ -116,7 +116,7 @@ int isEmpty(const ArrayList *arrayList);
 
 /**
  * @brief Check if the arraylist contains a specific element.
- * 
+ *
  * @param arrayList Pointer to the ArrayList.
  * @param data The value to search for.
  * @return 1 if the element is found, 0 otherwise.
@@ -125,7 +125,7 @@ int contains(const ArrayList *arrayList, int data);
 
 /**
  * @brief Get the index of the first occurrence of a specific element in the arraylist.
- * 
+ *
  * @param arrayList Pointer to the ArrayList.
  * @param data The value to search for.
  * @return The index of the element if found, -1 otherwise.
@@ -134,7 +134,7 @@ int indexOf(const ArrayList *arrayList, int data);
 
 /**
  * @brief Removes all elements from the ArrayList and frees its data memory.
- * 
+ *
  * @param arrayList Pointer to the ArrayList to be cleared.
  */
 void clear(ArrayList *arrayList);
@@ -142,7 +142,7 @@ void clear(ArrayList *arrayList);
 /**
  * @brief Ensures that the ArrayList has at least the specified minimum capacity.
  *        If the current capacity is less than minCapacity, the array is resized.
- * 
+ *
  * @param arrayList Pointer to the ArrayList to check or resize.
  * @param minCapacity The minimum required capacity.
  */
@@ -151,14 +151,28 @@ void ensureCapacity(ArrayList *arrayList, int minCapacity);
 /**
  * @brief Trims the capacity of the ArrayList to match the current number of elements (count).
  *        This reduces memory usage by freeing unused space.
- * 
+ *
  * @param arrayList Pointer to the ArrayList to trim.
  */
 void trimToSize(ArrayList *arrayList);
 
 /**
+ * @brief Reverses the order of the elements in the ArrayList.
+ *
+ * @param arrayList Pointer to the ArrayList to be reversed.
+ */
+void reverse(ArrayList *arrayList);
+
+/**
+ * @brief Sorts the elements of the ArrayList in ascending order.
+ *
+ * @param arrayList Pointer to the ArrayList to be sorted.
+ */
+void sort(ArrayList *arrayList);
+
+/**
  * @brief Creates an exact copy of the given ArrayList, including its elements.
- * 
+ *
  * @param arrayList Pointer to the ArrayList to be cloned.
  * @return Pointer to the new cloned ArrayList, or NULL if memory allocation fails.
  */
