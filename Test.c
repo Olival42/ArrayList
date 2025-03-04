@@ -31,6 +31,7 @@ int main()
 
     printf("%d\n", get(arrayList, 2));
 
+    getAllElements(arrayList);
     sort(arrayList);
     getAllElements(arrayList);
 

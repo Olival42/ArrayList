@@ -174,7 +174,7 @@ void sort(ArrayList *arrayList);
  * @brief Creates an exact copy of the given ArrayList, including its elements.
  *
  * @param arrayList Pointer to the ArrayList to be cloned.
- *@return Pointer to the new cloned ArrayList, or NULL if memory allocation fails.
+ * @return Pointer to the new cloned ArrayList, or NULL if memory allocation fails.
  */
 ArrayList *clone(const ArrayList *arrayList);
 

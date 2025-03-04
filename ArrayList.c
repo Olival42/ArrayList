@@ -330,9 +330,10 @@ void reverse(ArrayList *arrayList)
 
 void sort(ArrayList *arrayList)
 {
-    if (isEmpty(arrayList) == 1) return;
+    if (isEmpty(arrayList) == 1)
+        return;
 
-    bubbleSort(arrayList);
+    insertionSort(arrayList);
 }
 
 ArrayList *clone(const ArrayList *arrayList)
