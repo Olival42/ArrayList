@@ -40,5 +40,5 @@ int main()
     free(arrayList->data);
     free(arrayList);
 
-    return 0;
+    return 0; //
 }

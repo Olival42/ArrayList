@@ -1,5 +1,5 @@
 /*
- * @Name: ArrayList C
+ * @Name: ArrayList_C
  * @Author: Olival
  * @Date: 2025/03/02
  * @Repository: https://github.com/Olival42/ArrayList.git
